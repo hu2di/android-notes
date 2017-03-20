@@ -40,6 +40,7 @@ Return ads are enabled and activated by default. If you want to disable this fea
 StartAppSDK.init(this, "Your App ID", false);
 
 #########################################
+Banner Ads
 <com.startapp.android.publish.ads.banner.Banner
         android:id="@+id/startAppBanner"
         android:layout_width="wrap_content"
@@ -48,4 +49,5 @@ StartAppSDK.init(this, "Your App ID", false);
         android:layout_centerHorizontal="true"/>
 		
 #########################################
+Interstitial Ads are full page ads
 StartAppAd.showAd(this);
