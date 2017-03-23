@@ -59,6 +59,8 @@ private void requestNewInterstitial() {
     mInterstitialAd.loadAd(adRequest);
 }
          
-if (mInterstitialAd.isLoaded()) {
-    mInterstitialAd.show();
+private void showInterstitial() {
+    if (mInterstitialAd.isLoaded()) {
+        mInterstitialAd.show();
+    }
 }
