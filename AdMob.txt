@@ -1,4 +1,4 @@
-compile 'com.google.android.gms:play-services-ads:10.0.1'
+compile 'com.google.android.gms:play-services-ads:10.2.0'
 
 <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
@@ -15,7 +15,22 @@ xmlns:ads="http://schemas.android.com/apk/res-auto"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
 private void initBanner() {
-    AdView mAdView = (AdView) findViewById(R.id.adView);
+    final AdView mAdView = (AdView) findViewById(R.id.adView);
+    
+    mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+                mAdView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                mAdView.setVisibility(View.VISIBLE);
+            }
+    });
+    
     AdRequest adRequest = new AdRequest.Builder().build();
     mAdView.loadAd(adRequest);
 }
