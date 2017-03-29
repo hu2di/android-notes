@@ -1,4 +1,7 @@
 #########################################
+Copy file StartAppInApp-3.5.6.jar to ../YourProject/app/libs
+
+#########################################
 compile files('libs/StartAppInApp-3.5.6.jar')
 
 #########################################
