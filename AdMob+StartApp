@@ -1,0 +1,74 @@
+###############################################
+Init AdMob and StartApp first
+
+###############################################
+public class MyApplication extends Application {
+    public static final boolean isAdMob = false;
+}
+
+###############################################
+<RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+
+        <com.startapp.android.publish.ads.banner.Banner
+            android:id="@+id/startAppBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+            
+</RelativeLayout>
+
+###############################################
+private void initBanner() {
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        Banner banner = (Banner) findViewById(R.id.startAppBanner);
+
+        if (MyApplication.isAdMob) {
+            banner.setVisibility(View.GONE);
+
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mAdView.loadAd(adRequest);
+        } else {
+            mAdView.setVisibility(View.GONE);
+
+            StartAppSDK.init(this, "211909561", true);
+        }
+    }
+
+###############################################
+private void initInterstitialAd() {
+    if (MyApplication.isAdMob) {
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.interstitial_ad_unit_id));
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+            }
+        });
+
+        requestNewInterstitial();
+    }
+}
+    
+private void showInterstitial() {
+    if (MyApplication.isAdMob) {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+    } else {
+        StartAppAd.showAd(this);
+    }
+}
