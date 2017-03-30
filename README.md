@@ -1,4 +1,4 @@
-# android-ads
+# android-notes
 Notes for Android: Google Admob, MoPub, StartApp, Build Wifi, Compile project... 
 
 # import module
