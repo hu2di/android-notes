@@ -23,6 +23,10 @@ adb connect 192.168.*.*:5555<br>
 
 adb -s 192.168.*.*:5555 usb
 
+# Reset purchased
+Open Android Studio -> Terminal<br>
+adb shell pm clear com.android.vending
+
 # About
 Created by HuyHung Dinh<br>
 GitHub: https://github.com/hu2di<br>
