@@ -1,5 +1,3 @@
-package com.gpaddy.hungdh.recorder.model;
-
 import android.content.Context;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -20,7 +18,7 @@ public class FileUtils {
 
     private static Context mContext;
 
-    private static final String APP_DIR = "mRecorder";
+    private static final String APP_DIR = "HUNGDH";
 
     public static FileUtils getInstance(Context context) {
         if (instance == null) {
