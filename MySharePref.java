@@ -1,5 +1,3 @@
-package com.blogspot.hu2di.mybrowser.controller.utils;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -9,7 +7,7 @@ import android.content.SharedPreferences;
 
 public class MySharePref {
 
-    private static final String SETTINGS = "com.blogspot.hu2di.mybrowser.settings";
+    private static final String SETTINGS = "com.blogspot.hu2di.settings";
 
     private static final String KEY_NEWS = "news";
 
