@@ -70,14 +70,12 @@ private void showInterstitial() {
 
 //NATIVE
 <com.google.android.gms.ads.NativeExpressAdView
-    android:id="@+id/adView"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:layout_alignParentBottom="true"
-    ads:adSize="320x300"
-    ads:adUnitId="@string/native_ad_unit_id">
-</com.google.android.gms.ads.NativeExpressAdView>
+        android:id="@+id/adViewExpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        ads:adSize="320x300"
+        ads:adUnitId="@string/native_ad_unit_id"/>
 
 private void initNativeAds() {
     final NativeExpressAdView nativeAds = (NativeExpressAdView) findViewById(R.id.adViewExpress);
