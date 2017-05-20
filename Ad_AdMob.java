@@ -1,5 +1,6 @@
 compile 'com.google.android.gms:play-services-ads:10.2.0'
 
+<string name="id_native_result_unit">ca-app-pub-9414566302380491/2411858161</string>
 <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
