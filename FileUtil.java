@@ -111,7 +111,23 @@ public class FileUtils {
         File file = new File(pathFile);
         return new Date(file.lastModified());
     }
+    
+    public static String getLastModified(File file) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        Date date = new Date(file.lastModified());
+        return sdf.format(date);
+    }
 
+    public static String getFileSize(File file) {
+        String value = null;
+        long size = file.length() / 1024;//call function and convert bytes into Kb
+        if (size >= 1024)
+            value = size / 1024 + " Mb";
+        else
+            value = size + " Kb";
+        return value;
+    }
+    
     public static void scanMedia(Context context, String filePath) {
         MediaScannerConnection.scanFile(
                 context, new String[]{filePath}, null,
