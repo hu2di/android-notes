@@ -122,9 +122,9 @@ public class FileUtils {
         String value = null;
         long size = file.length() / 1024;//call function and convert bytes into Kb
         if (size >= 1024)
-            value = size / 1024 + " Mb";
+            value = size / 1024 + " MB";
         else
-            value = size + " Kb";
+            value = size + " KB";
         return value;
     }
     
