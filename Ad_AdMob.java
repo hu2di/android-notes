@@ -4,6 +4,11 @@ compile 'com.google.android.gms:play-services-ads:10.2.0'
 <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
+Rewarded Video 		ca-app-pub-3940256099942544/5224354917
+Native Advanced 	ca-app-pub-3940256099942544/2247696110
+Native Express 	(Small template): ca-app-pub-3940256099942544/2793859312
+		(Large template): ca-app-pub-3940256099942544/2177258514
+
 //BANNER
 xmlns:ads="http://schemas.android.com/apk/res-auto"
 
