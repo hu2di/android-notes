@@ -8,6 +8,20 @@ Notes for Android: Google Admob, MoPub, StartApp, Build Wifi, Compile project...
     compile project(':project')
    }
    
+# import .aar file
+1. Copy .aar file to ../app/libs/
+2. allprojects {
+   repositories {
+      jcenter()
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+3. dependencies {
+    compile(name:'cards', ext:'aar')
+   }
+
 # import .jar file
 1. Copy .jar file to ../app/libs/
 2. dependencies {
