@@ -1,14 +1,14 @@
-# android-notes
+## android-notes
 Notes for Android: Google Admob, MoPub, StartApp, Build Wifi, Compile project... 
 
-# import module
+## import module
 1. Open settings.gradle
 2. include ':project'
 3. dependencies {
     compile project(':project')
    }
    
-# import .aar file
+## import .aar file
 1. Copy .aar file to ../app/libs/
 2. allprojects {
    repositories {
@@ -22,13 +22,13 @@ Notes for Android: Google Admob, MoPub, StartApp, Build Wifi, Compile project...
     compile(name:'cards', ext:'aar')
    }
 
-# import .jar file
+## import .jar file
 1. Copy .jar file to ../app/libs/
 2. dependencies {
     compile files('libs/file.jar')
    }
    
-# Build Wifi
+## Build Wifi
 Folder ..\Android\sdk\platform-tools<br>
 
 adb devices<br>
@@ -37,12 +37,12 @@ adb connect 192.168.*.*:5555<br>
 
 adb -s 192.168.*.*:5555 usb
 
-# Reset purchased
+## Reset purchased
 Open Android Studio -> Terminal<br>
 adb shell pm clear com.android.vending
 
 
-##PayPal
+## PayPal
  - [**Donate 5 $**](https://www.paypal.me/hungdh/5usd): Thank's for creating this project, here's a coffee (or some beer) for you!
  - [**Donate 10 $**](https://www.paypal.me/hungdh/10usd): Wow, I am stunned. Let me take you to the movies!
  - [**Donate 15 $**](https://www.paypal.me/hungdh/15usd): I really appreciate your work, let's grab some lunch! 
@@ -51,7 +51,7 @@ adb shell pm clear com.android.vending
  - [**Donate 100 $**](https://www.paypal.me/hungdh/100usd): You are the man! This project saved me hours (if not days) of struggle and hard work, simply awesome!
  - Of course, you can also [**choose what you want to donate**](https://www.paypal.me/hungdh), all donations are awesome!
  
-# About
+## About
 Created by HuyHung Dinh<br>
 GitHub: https://github.com/hu2di<br>
 Email: hebitaxy@gmail.com
