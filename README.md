@@ -42,7 +42,7 @@ Open Android Studio -> Terminal<br>
 adb shell pm clear com.android.vending
 
 
-**PayPal**
+##PayPal
  - [**Donate 5 $**](https://www.paypal.me/hungdh/5usd): Thank's for creating this project, here's a coffee (or some beer) for you!
  - [**Donate 10 $**](https://www.paypal.me/hungdh/10usd): Wow, I am stunned. Let me take you to the movies!
  - [**Donate 15 $**](https://www.paypal.me/hungdh/15usd): I really appreciate your work, let's grab some lunch! 
